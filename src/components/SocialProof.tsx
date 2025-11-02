@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +9,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
 
 // Import before/after assets
 import before1 from "../assets/social-proof/1-before.jpg";
@@ -69,6 +77,14 @@ const examples: ExampleProps[] = [
 ];
 
 export const SocialProof = () => {
+  const [showPhotoModal, setShowPhotoModal] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState<string>("");
+
+  const handlePhotoClick = (photoSrc: string) => {
+    setSelectedPhoto(photoSrc);
+    setShowPhotoModal(true);
+  };
+
   return (
     <section id="social-proof" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
@@ -119,7 +135,8 @@ export const SocialProof = () => {
               <CarouselItem key={index}>
                 <Card>
                   <CardContent className="p-6">
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    {/* Desktop: Both Before and After */}
+                    <div className="hidden md:grid md:grid-cols-2 gap-6 mb-6">
                       {/* Before */}
                       <div className="space-y-2">
                         <Badge variant="outline" className="mb-2 text-sm py-1.5 px-3">
@@ -152,6 +169,33 @@ export const SocialProof = () => {
                       </div>
                     </div>
 
+                    {/* Mobile: Only After with Button */}
+                    <div className="md:hidden mb-6">
+                      <div className="space-y-2">
+                        <Badge variant="outline" className="mb-2 text-sm py-1.5 px-3">
+                          Result
+                        </Badge>
+                        <div className="rounded-lg overflow-hidden border relative">
+                          <video
+                            src={example.after}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-auto object-cover aspect-[9/16]"
+                          />
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="absolute top-4 right-4"
+                            onClick={() => handlePhotoClick(example.before)}
+                          >
+                            👁️ See original photo
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Testimonial */}
                     <div className="text-center">
                       <p className="text-lg italic mb-2">
@@ -180,6 +224,25 @@ export const SocialProof = () => {
           ))}
         </div>
       </div>
+
+      {/* Mobile Photo Modal */}
+      <Dialog open={showPhotoModal} onOpenChange={setShowPhotoModal}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Original Product Photo</DialogTitle>
+          </DialogHeader>
+          <div className="rounded-lg overflow-hidden">
+            <img
+              src={selectedPhoto}
+              alt="Original product photo"
+              className="w-full h-auto object-cover aspect-[9/16]"
+            />
+          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            Simple product photo uploaded
+          </p>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
