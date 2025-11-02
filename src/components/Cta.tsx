@@ -9,7 +9,7 @@ export const Cta = () => {
     >
       <div className="container text-center space-y-8">
         {/* Eyebrow */}
-        <Badge variant="secondary" className="text-sm py-2 px-4">
+        <Badge variant="secondary" className="text-base py-2.5 px-5">
           JOIN 1,000+ ETSY SELLERS
         </Badge>
 

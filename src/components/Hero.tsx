@@ -17,7 +17,7 @@ export const Hero = () => {
     <section className="container grid place-items-center py-20 md:py-32 gap-10">
       <div className="text-center space-y-6">
         {/* Badge */}
-        <Badge variant="secondary" className="text-sm py-2 px-4">
+        <Badge variant="secondary" className="text-base py-2.5 px-5">
           ✨ Trusted by 1,000+ Etsy sellers
         </Badge>
 
@@ -68,7 +68,7 @@ export const Hero = () => {
           {/* LEFT: You Upload */}
           <div className="space-y-4">
             <div className="text-center">
-              <Badge variant="outline" className="mb-4">
+              <Badge variant="outline" className="mb-4 text-base py-2 px-4">
                 📸 You upload
               </Badge>
             </div>
@@ -87,7 +87,7 @@ export const Hero = () => {
           {/* RIGHT: You Get */}
           <div className="space-y-4">
             <div className="text-center">
-              <Badge variant="outline" className="mb-4">
+              <Badge variant="outline" className="mb-4 text-base py-2 px-4">
                 ✨ You get
               </Badge>
             </div>
@@ -101,13 +101,13 @@ export const Hero = () => {
                 className="w-full h-auto"
               />
               <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
-                <Badge variant="secondary" className="text-xs">
+                <Badge variant="secondary" className="text-sm py-1.5 px-3">
                   📱 9:16 Format
                 </Badge>
-                <Badge variant="secondary" className="text-xs">
+                <Badge variant="secondary" className="text-sm py-1.5 px-3">
                   ⏱️ Ready in 5 min
                 </Badge>
-                <Badge variant="secondary" className="text-xs">
+                <Badge variant="secondary" className="text-sm py-1.5 px-3">
                   🎥 1080p HD
                 </Badge>
               </div>
@@ -121,7 +121,7 @@ export const Hero = () => {
         {/* Mobile: Video First with Button */}
         <div className="md:hidden space-y-4">
           <div className="text-center">
-            <Badge variant="outline" className="mb-4">
+            <Badge variant="outline" className="mb-4 text-base py-2 px-4">
               ✨ You get
             </Badge>
           </div>
@@ -135,13 +135,13 @@ export const Hero = () => {
               className="w-full h-auto"
             />
             <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
-              <Badge variant="secondary" className="text-xs">
+              <Badge variant="secondary" className="text-sm py-1.5 px-3">
                 📱 9:16 Format
               </Badge>
-              <Badge variant="secondary" className="text-xs">
+              <Badge variant="secondary" className="text-sm py-1.5 px-3">
                 ⏱️ Ready in 5 min
               </Badge>
-              <Badge variant="secondary" className="text-xs">
+              <Badge variant="secondary" className="text-sm py-1.5 px-3">
                 🎥 1080p HD
               </Badge>
             </div>

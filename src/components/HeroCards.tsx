@@ -115,7 +115,7 @@ export const HeroCards = () => {
             Free
             <Badge
               variant="secondary"
-              className="text-sm text-primary"
+              className="text-sm text-primary py-1.5 px-3"
             >
               Most popular
             </Badge>

@@ -64,7 +64,7 @@ export const HowItWorks = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">{description}</p>
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline" className="text-sm py-1.5 px-3">
                 {tip}
               </Badge>
             </CardContent>
@@ -80,34 +80,34 @@ export const HowItWorks = () => {
       <div className="mt-16 max-w-3xl mx-auto">
         <Card className="bg-primary/5 border-primary">
           <CardContent className="p-8">
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold mb-6">
               ✨ Get 5 Videos to Choose From for $4.99
             </h3>
-            <div className="grid md:grid-cols-2 gap-4 text-left mb-6">
-              <div className="space-y-2">
-                <p className="flex items-center gap-2">
-                  <span>⚡</span>
-                  <span>Results ready in 5 minutes</span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <span>📱</span>
-                  <span>Vertical 9:16 format (perfect for Stories, Reels, TikTok)</span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <span>🎥</span>
-                  <span>HD quality (1080p)</span>
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="flex items-center gap-2">
-                  <span>✅</span>
-                  <span>Ready to upload to Etsy, Instagram, TikTok</span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <span>🛡️</span>
-                  <span>Full commercial rights</span>
-                </p>
-              </div>
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-left mb-6">
+              <p className="flex items-start gap-2">
+                <span className="text-xl mt-0.5 flex-shrink-0">⚡</span>
+                <span>Results ready in 5 minutes</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="text-xl mt-0.5 flex-shrink-0">✅</span>
+                <span>Ready to upload to Etsy, Instagram, TikTok</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="text-xl mt-0.5 flex-shrink-0">📱</span>
+                <span>Vertical 9:16 format (perfect for Stories, Reels, TikTok)</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="text-xl mt-0.5 flex-shrink-0">🛡️</span>
+                <span>Full commercial rights</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="text-xl mt-0.5 flex-shrink-0">🎥</span>
+                <span>HD quality (1080p)</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span className="text-xl mt-0.5 flex-shrink-0">🚫</span>
+                <span>No watermarks ever</span>
+              </p>
             </div>
             <Button size="lg" className="w-full md:w-auto">
               Try It Now →

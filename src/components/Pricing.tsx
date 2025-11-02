@@ -25,7 +25,7 @@ export const Pricing = () => {
       <div className="max-w-2xl mx-auto">
         <Card className="border-primary shadow-xl">
           <CardHeader className="text-center">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 text-base py-2 px-4">
               ✨ Launch Pricing
             </Badge>
             <CardTitle className="text-xl text-muted-foreground">
@@ -43,26 +43,34 @@ export const Pricing = () => {
               <span className="text-muted-foreground line-through">
                 Traditional shoot: $2,000+
               </span>
-              <Badge variant="destructive" className="text-lg px-4 py-1">
+              <Badge variant="destructive" className="text-lg px-5 py-2">
                 Save 99%
               </Badge>
             </div>
 
             <div>
               <h3 className="font-bold text-lg mb-4">What's included:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
+              <div className="grid md:grid-cols-2 gap-x-6 gap-y-3">
+                <div className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>
                     5 different videos per generation — choose your favorite or use
                     them all
                   </span>
-                </li>
-                <li className="flex items-start gap-2">
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Full commercial rights</span>
+                </div>
+                <div className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>HD quality (1080p) broadcast-level</span>
-                </li>
-                <li className="flex items-start gap-2">
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>No watermarks ever</span>
+                </div>
+                <div className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
                     <div>Vertical 9:16 format</div>
@@ -70,28 +78,20 @@ export const Pricing = () => {
                       Perfect for Stories, Reels, TikTok, Etsy
                     </div>
                   </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Full commercial rights</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>No watermarks ever</span>
-                </li>
-                <li className="flex items-start gap-2">
+                </div>
+                <div className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Ready in 5 minutes or faster</span>
-                </li>
-                <li className="flex items-start gap-2">
+                </div>
+                <div className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>10+ AI models to choose from</span>
-                </li>
-                <li className="flex items-start gap-2">
+                </div>
+                <div className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>6+ environments for any style</span>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </CardContent>
 

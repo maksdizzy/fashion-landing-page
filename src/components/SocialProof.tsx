@@ -122,7 +122,7 @@ export const SocialProof = () => {
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       {/* Before */}
                       <div className="space-y-2">
-                        <Badge variant="outline" className="mb-2">
+                        <Badge variant="outline" className="mb-2 text-sm py-1.5 px-3">
                           Uploaded
                         </Badge>
                         <div className="rounded-lg overflow-hidden border">
@@ -136,7 +136,7 @@ export const SocialProof = () => {
 
                       {/* After */}
                       <div className="space-y-2">
-                        <Badge variant="outline" className="mb-2">
+                        <Badge variant="outline" className="mb-2 text-sm py-1.5 px-3">
                           Result
                         </Badge>
                         <div className="rounded-lg overflow-hidden border">

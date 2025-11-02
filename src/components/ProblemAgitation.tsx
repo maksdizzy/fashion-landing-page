@@ -59,7 +59,7 @@ export const ProblemAgitation = () => {
         <Card className="border-primary">
           <CardHeader>
             <div className="flex justify-center mb-2">
-              <Badge>Recommended</Badge>
+              <Badge className="text-sm py-1.5 px-3">Recommended</Badge>
             </div>
             <CardTitle className="text-center">Our AI Service</CardTitle>
           </CardHeader>
@@ -103,7 +103,7 @@ export const ProblemAgitation = () => {
               <TableHead className="bg-primary/5">
                 <div className="flex items-center justify-between">
                   Our AI Service
-                  <Badge variant="default" className="ml-2">Recommended</Badge>
+                  <Badge variant="default" className="ml-2 text-sm py-1.5 px-3">Recommended</Badge>
                 </div>
               </TableHead>
             </TableRow>

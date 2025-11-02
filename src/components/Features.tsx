@@ -1,4 +1,3 @@
-import { Badge } from "./ui/badge";
 import {
   Card,
   CardContent,
@@ -9,7 +8,6 @@ import {
 interface FeatureProps {
   icon: string;
   title: string;
-  badge?: string;
   features: string[];
 }
 
@@ -39,7 +37,6 @@ const features: FeatureProps[] = [
   {
     icon: "🛡️",
     title: "100% Yours",
-    badge: "Most Popular",
     features: [
       "Full commercial usage rights",
       "No watermarks ever",
@@ -66,14 +63,9 @@ export const Features = () => {
       </p>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {features.map(({ icon, title, badge, features: featureList }) => (
-          <Card key={title} className={badge ? "border-primary shadow-lg" : ""}>
+        {features.map(({ icon, title, features: featureList }) => (
+          <Card key={title}>
             <CardHeader>
-              {badge && (
-                <div className="flex justify-center mb-2">
-                  <Badge variant="default">{badge}</Badge>
-                </div>
-              )}
               <CardTitle className="flex flex-col items-center gap-4">
                 <div className="text-6xl">{icon}</div>
                 <div className="text-xl">{title}</div>
