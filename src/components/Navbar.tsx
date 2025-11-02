@@ -12,7 +12,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
@@ -25,12 +24,12 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: "#howItWorks",
+    label: "How It Works",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#features",
+    label: "Examples",
   },
   {
     href: "#pricing",
@@ -55,7 +54,7 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              ShadcnUI/React
+              ReelCraft
             </a>
           </NavigationMenuItem>
 
@@ -79,7 +78,7 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                    ReelCraft
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -96,14 +95,12 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
+                    href="#"
                     className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
+                      variant: "default",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    Login
                   </a>
                 </nav>
               </SheetContent>
@@ -129,12 +126,17 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+              href="#"
+              className={`${buttonVariants({ variant: "ghost" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              Login
+            </a>
+            <a
+              rel="noreferrer noopener"
+              href="#pricing"
+              className={`${buttonVariants({ variant: "default" })}`}
+            >
+              Get Started
             </a>
 
             <ModeToggle />

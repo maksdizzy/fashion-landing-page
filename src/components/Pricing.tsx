@@ -3,144 +3,136 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
-enum PopularPlanType {
-  NO = 0,
-  YES = 1,
-}
-
-interface PricingProps {
-  title: string;
-  popular: PopularPlanType;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefitList: string[];
-}
-
-const pricingList: PricingProps[] = [
-  {
-    title: "Free",
-    popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
-    benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
-    ],
-  },
-  {
-    title: "Premium",
-    popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
-  {
-    title: "Enterprise",
-    popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
-    benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
-];
-
 export const Pricing = () => {
   return (
-    <section
-      id="pricing"
-      className="container py-24 sm:py-32"
-    >
+    <section id="pricing" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Fair Pricing.{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          Unlimited{" "}
+          No Surprises.
         </span>
-        Access
       </h2>
-      <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
-      </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {pricingList.map((pricing: PricingProps) => (
-          <Card
-            key={pricing.title}
-            className={
-              pricing.popular === PopularPlanType.YES
-                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
-                : ""
-            }
-          >
-            <CardHeader>
-              <CardTitle className="flex item-center justify-between">
-                {pricing.title}
-                {pricing.popular === PopularPlanType.YES ? (
-                  <Badge
-                    variant="secondary"
-                    className="text-sm text-primary"
-                  >
-                    Most popular
-                  </Badge>
-                ) : null}
-              </CardTitle>
-              <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
-              </div>
+      <p className="text-xl text-center text-muted-foreground pt-4 pb-8">
+        Pay only for what you generate. No subscriptions. No hidden fees.
+      </p>
 
-              <CardDescription>{pricing.description}</CardDescription>
-            </CardHeader>
+      <div className="max-w-2xl mx-auto">
+        <Card className="border-primary shadow-xl">
+          <CardHeader className="text-center">
+            <Badge variant="secondary" className="mb-4">
+              ✨ Launch Pricing
+            </Badge>
+            <CardTitle className="text-xl text-muted-foreground">
+              One-Time Payment
+            </CardTitle>
+            <div>
+              <span className="text-5xl font-bold">$4.99</span>
+              <span className="text-muted-foreground text-xl"> /generation</span>
+            </div>
+          </CardHeader>
 
-            <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
-            </CardContent>
+          <CardContent className="space-y-6">
+            {/* Value Anchor */}
+            <div className="flex items-center justify-center gap-4 text-center">
+              <span className="text-muted-foreground line-through">
+                Traditional shoot: $2,000+
+              </span>
+              <Badge variant="destructive" className="text-lg px-4 py-1">
+                Save 99%
+              </Badge>
+            </div>
 
-            <hr className="w-4/5 m-auto mb-4" />
-
-            <CardFooter className="flex">
-              <div className="space-y-4">
-                {pricing.benefitList.map((benefit: string) => (
-                  <span
-                    key={benefit}
-                    className="flex"
-                  >
-                    <Check className="text-green-500" />{" "}
-                    <h3 className="ml-2">{benefit}</h3>
+            <div>
+              <h3 className="font-bold text-lg mb-4">What's included:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>
+                    5 different videos per generation — choose your favorite or use
+                    them all
                   </span>
-                ))}
-              </div>
-            </CardFooter>
-          </Card>
-        ))}
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>HD quality (1080p) broadcast-level</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div>Vertical 9:16 format</div>
+                    <div className="text-sm text-muted-foreground">
+                      Perfect for Stories, Reels, TikTok, Etsy
+                    </div>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Full commercial rights</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>No watermarks ever</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Ready in 5 minutes or faster</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>10+ AI models to choose from</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>6+ environments for any style</span>
+                </li>
+              </ul>
+            </div>
+          </CardContent>
+
+          <CardFooter className="flex flex-col gap-4">
+            <Button size="lg" className="w-full text-lg">
+              Create My First Video →
+            </Button>
+
+            {/* Guarantee */}
+            <div className="text-center">
+              <p className="font-semibold mb-1">🛡️ 100% Satisfaction Guaranteed</p>
+              <p className="text-sm text-muted-foreground">
+                Not satisfied? We'll make it right.
+              </p>
+            </div>
+          </CardFooter>
+        </Card>
+
+        {/* Trust Stats */}
+        <div className="grid grid-cols-2 gap-8 mt-12 text-center">
+          <div>
+            <h3 className="text-3xl font-bold">1,000+</h3>
+            <p className="text-muted-foreground">Happy Sellers</p>
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold">4.9/5</h3>
+            <p className="text-muted-foreground">Average Rating</p>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <p className="text-lg italic">"Best $5 I've spent on my business!"</p>
+          <p className="text-sm text-muted-foreground">— Sarah K.</p>
+        </div>
+
+        {/* Payment Badges */}
+        <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
+          <span>🔒 Secure Payment</span>
+          <span>💳 All Cards Accepted</span>
+          <span>⚡ Instant Access</span>
+        </div>
       </div>
     </section>
   );

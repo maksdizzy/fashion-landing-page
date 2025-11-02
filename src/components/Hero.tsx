@@ -1,53 +1,187 @@
+import { useState } from "react";
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./HeroCards";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Badge } from "./ui/badge";
+import heroAfterVideo from "../assets/hero/hero-after.mp4";
+import heroBeforeImage from "../assets/hero/hero-before.jpg";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
 
 export const Hero = () => {
+  const [showPhotoModal, setShowPhotoModal] = useState(false);
+
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6">
-        <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shadcn
-            </span>{" "}
-            landing page
-          </h1>{" "}
-          for{" "}
-          <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              React
-            </span>{" "}
-            developers
-          </h2>
+    <section className="container grid place-items-center py-20 md:py-32 gap-10">
+      <div className="text-center space-y-6">
+        {/* Badge */}
+        <Badge variant="secondary" className="text-sm py-2 px-4">
+          ✨ Trusted by 1,000+ Etsy sellers
+        </Badge>
+
+        {/* Main Headline */}
+        <main className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-5xl mx-auto">
+          <h1>
+            Professional AI Model Videos for Your Fashion Products.
+            <br />
+            <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl">
+              Without the $2,000-$5,000 Price Tag.
+            </span>
+          </h1>
         </main>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Build your React landing page effortlessly with the required sections
-          to your project.
+        {/* Subheadline */}
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          Upload your photo. Get 5 professional videos in 5 minutes. Only $4.99.
         </p>
 
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Get Started</Button>
+        {/* Trust Badges */}
+        <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <span className="flex items-center gap-2">
+            ✓ Optimized for Etsy
+          </span>
+          <span className="flex items-center gap-2">
+            ✓ Full Commercial Rights
+          </span>
+          <span className="flex items-center gap-2">
+            ✓ Ready in 5 Minutes
+          </span>
+        </div>
 
-          <a
-            rel="noreferrer noopener"
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-            target="_blank"
-            className={`w-full md:w-1/3 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            Github Repository
-            <GitHubLogoIcon className="ml-2 w-5 h-5" />
-          </a>
+        {/* Primary CTA */}
+        <div className="flex flex-col items-center gap-2">
+          <Button size="lg" className="text-lg px-8 py-6">
+            Create My First Video →
+          </Button>
+          <p className="text-sm text-muted-foreground">
+            Get 5 videos instantly • Only $4.99
+          </p>
         </div>
       </div>
 
-      {/* Hero cards sections */}
-      <div className="z-10">
-        <HeroCards />
+      {/* Before/After Comparison */}
+      <div className="w-full max-w-6xl">
+        {/* Desktop: Split Screen */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8">
+          {/* LEFT: You Upload */}
+          <div className="space-y-4">
+            <div className="text-center">
+              <Badge variant="outline" className="mb-4">
+                📸 You upload
+              </Badge>
+            </div>
+            <div className="rounded-lg overflow-hidden border">
+              <img
+                src={heroBeforeImage}
+                alt="Simple phone photo"
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-sm text-muted-foreground">
+              Simple phone photo
+            </p>
+          </div>
+
+          {/* RIGHT: You Get */}
+          <div className="space-y-4">
+            <div className="text-center">
+              <Badge variant="outline" className="mb-4">
+                ✨ You get
+              </Badge>
+            </div>
+            <div className="rounded-lg overflow-hidden border relative">
+              <video
+                src={heroAfterVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto"
+              />
+              <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
+                <Badge variant="secondary" className="text-xs">
+                  📱 9:16 Format
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  ⏱️ Ready in 5 min
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  🎥 1080p HD
+                </Badge>
+              </div>
+            </div>
+            <p className="text-center text-sm text-muted-foreground">
+              Professional AI model video
+            </p>
+          </div>
+        </div>
+
+        {/* Mobile: Video First with Button */}
+        <div className="md:hidden space-y-4">
+          <div className="text-center">
+            <Badge variant="outline" className="mb-4">
+              ✨ You get
+            </Badge>
+          </div>
+          <div className="rounded-lg overflow-hidden border relative">
+            <video
+              src={heroAfterVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto"
+            />
+            <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
+              <Badge variant="secondary" className="text-xs">
+                📱 9:16 Format
+              </Badge>
+              <Badge variant="secondary" className="text-xs">
+                ⏱️ Ready in 5 min
+              </Badge>
+              <Badge variant="secondary" className="text-xs">
+                🎥 1080p HD
+              </Badge>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              className="absolute top-4 right-4"
+              onClick={() => setShowPhotoModal(true)}
+            >
+              👁️ See original photo
+            </Button>
+          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            Professional AI model video
+          </p>
+        </div>
+      </div>
+
+      {/* Mobile Photo Modal */}
+      <Dialog open={showPhotoModal} onOpenChange={setShowPhotoModal}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Original Product Photo</DialogTitle>
+          </DialogHeader>
+          <div className="rounded-lg overflow-hidden">
+            <img
+              src={heroBeforeImage}
+              alt="Original product photo"
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            Simple phone photo uploaded
+          </p>
+        </DialogContent>
+      </Dialog>
+
+      {/* Scroll Indicator */}
+      <div className="text-center text-sm text-muted-foreground animate-bounce">
+        <p>Scroll to explore ↓</p>
       </div>
 
       {/* Shadow effect */}
