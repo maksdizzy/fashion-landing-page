@@ -89,7 +89,7 @@ export const SocialProof = () => {
     <section id="social-proof" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold">
-          From Simple Photos to Sales-Boosting Videos
+          From Static Photos to Sales-Boosting Videos
         </h2>
         <p className="text-xl text-muted-foreground mt-4 mb-8">
           Over 1,000 Etsy sellers have already boosted their sales with AI videos

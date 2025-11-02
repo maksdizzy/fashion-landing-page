@@ -124,7 +124,7 @@ Scroll to explore
 
 **Section Title:**
 ```
-From Simple Photos to Sales-Boosting Videos
+From Static Photos to Sales-Boosting Videos
 ```
 
 **Section Subtitle:**
