@@ -76,7 +76,7 @@ export const Hero = () => {
               <img
                 src={heroBeforeImage}
                 alt="Simple phone photo"
-                className="w-full h-auto"
+                className="w-full h-auto object-cover aspect-[9/16]"
               />
             </div>
             <p className="text-center text-sm text-muted-foreground">
@@ -98,7 +98,7 @@ export const Hero = () => {
                 loop
                 muted
                 playsInline
-                className="w-full h-auto"
+                className="w-full h-auto object-cover aspect-[9/16]"
               />
               <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
                 <Badge variant="secondary" className="text-sm py-1.5 px-3">
@@ -132,7 +132,7 @@ export const Hero = () => {
               loop
               muted
               playsInline
-              className="w-full h-auto"
+              className="w-full h-auto object-cover aspect-[9/16]"
             />
             <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
               <Badge variant="secondary" className="text-sm py-1.5 px-3">
@@ -170,7 +170,7 @@ export const Hero = () => {
             <img
               src={heroBeforeImage}
               alt="Original product photo"
-              className="w-full h-auto"
+              className="w-full h-auto object-cover aspect-[9/16]"
             />
           </div>
           <p className="text-center text-sm text-muted-foreground">

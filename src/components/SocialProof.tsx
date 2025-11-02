@@ -129,7 +129,7 @@ export const SocialProof = () => {
                           <img
                             src={example.before}
                             alt="Before - Product photo"
-                            className="w-full h-auto"
+                            className="w-full h-auto object-cover aspect-[9/16]"
                           />
                         </div>
                       </div>
@@ -146,7 +146,7 @@ export const SocialProof = () => {
                             loop
                             muted
                             playsInline
-                            className="w-full h-auto"
+                            className="w-full h-auto object-cover aspect-[9/16]"
                           />
                         </div>
                       </div>
