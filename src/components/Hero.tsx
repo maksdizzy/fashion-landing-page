@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import { LazyVideo } from "./LazyVideo";
 import heroAfterVideo from "../assets/hero/hero-after.mp4";
-import heroBeforeImage from "../assets/hero/hero-before.jpg";
+import heroBeforeImage from "../assets/hero/hero-before.webp";
 import {
   Dialog,
   DialogContent,
@@ -18,7 +19,7 @@ export const Hero = () => {
       <div className="text-center space-y-6">
         {/* Badge */}
         <Badge variant="secondary" className="text-base py-2.5 px-5">
-          ✨ Trusted by 1,000+ Etsy sellers
+          ✨ Perfect for Etsy, Instagram, TikTok & YouTube
         </Badge>
 
         {/* Main Headline */}
@@ -27,7 +28,7 @@ export const Hero = () => {
             Professional AI Model Videos for Your Fashion Products.
             <br />
             <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl">
-              Without the $2,000-$5,000 Price Tag.
+              Without Hiring Models or Renting Studios.
             </span>
           </h1>
         </main>
@@ -40,7 +41,7 @@ export const Hero = () => {
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center gap-6 text-sm">
           <span className="flex items-center gap-2">
-            ✓ Optimized for Etsy
+            ✓ Etsy, Instagram, TikTok, YouTube
           </span>
           <span className="flex items-center gap-2">
             ✓ Full Commercial Rights
@@ -77,6 +78,7 @@ export const Hero = () => {
                 src={heroBeforeImage}
                 alt="Simple phone photo"
                 className="w-full h-auto object-cover aspect-[9/16]"
+                loading="lazy"
               />
             </div>
             <p className="text-center text-sm text-muted-foreground">
@@ -92,13 +94,14 @@ export const Hero = () => {
               </Badge>
             </div>
             <div className="rounded-lg overflow-hidden border relative">
-              <video
+              <LazyVideo
                 src={heroAfterVideo}
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="w-full h-auto object-cover aspect-[9/16]"
+                preload="metadata"
               />
               <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
                 <Badge variant="secondary" className="text-sm py-1.5 px-3">
@@ -126,13 +129,14 @@ export const Hero = () => {
             </Badge>
           </div>
           <div className="rounded-lg overflow-hidden border relative">
-            <video
+            <LazyVideo
               src={heroAfterVideo}
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-auto object-cover aspect-[9/16]"
+              preload="metadata"
             />
             <div className="absolute bottom-4 left-4 right-4 flex gap-2 flex-wrap">
               <Badge variant="secondary" className="text-sm py-1.5 px-3">
@@ -171,6 +175,7 @@ export const Hero = () => {
               src={heroBeforeImage}
               alt="Original product photo"
               className="w-full h-auto object-cover aspect-[9/16]"
+              loading="lazy"
             />
           </div>
           <p className="text-center text-sm text-muted-foreground">

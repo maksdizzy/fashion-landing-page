@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
+import { LazyVideo } from "./LazyVideo";
 import {
   Carousel,
   CarouselContent,
@@ -17,17 +18,17 @@ import {
 } from "./ui/dialog";
 
 // Import before/after assets
-import before1 from "../assets/social-proof/1-before.jpg";
+import before1 from "../assets/social-proof/1-before.webp";
 import after1 from "../assets/social-proof/1-after.mp4";
-import before2 from "../assets/social-proof/2-before.jpg";
+import before2 from "../assets/social-proof/2-before.webp";
 import after2 from "../assets/social-proof/2-after.mp4";
-import before3 from "../assets/social-proof/3-before.jpg";
+import before3 from "../assets/social-proof/3-before.webp";
 import after3 from "../assets/social-proof/3-after.mp4";
-import before4 from "../assets/social-proof/4-before.jpg";
+import before4 from "../assets/social-proof/4-before.webp";
 import after4 from "../assets/social-proof/4-after.mp4";
-import before5 from "../assets/social-proof/5-before.jpg";
+import before5 from "../assets/social-proof/5-before.webp";
 import after5 from "../assets/social-proof/5-after.mp4";
-import before6 from "../assets/social-proof/6-before.jpg";
+import before6 from "../assets/social-proof/6-before.webp";
 import after6 from "../assets/social-proof/6-after.mp4";
 
 interface ExampleProps {
@@ -147,6 +148,7 @@ export const SocialProof = () => {
                             src={example.before}
                             alt="Before - Product photo"
                             className="w-full h-auto object-cover aspect-[9/16]"
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -157,13 +159,14 @@ export const SocialProof = () => {
                           Result
                         </Badge>
                         <div className="rounded-lg overflow-hidden border">
-                          <video
+                          <LazyVideo
                             src={example.after}
                             autoPlay
                             loop
                             muted
                             playsInline
                             className="w-full h-auto object-cover aspect-[9/16]"
+                            preload="none"
                           />
                         </div>
                       </div>
@@ -176,13 +179,14 @@ export const SocialProof = () => {
                           Result
                         </Badge>
                         <div className="rounded-lg overflow-hidden border relative">
-                          <video
+                          <LazyVideo
                             src={example.after}
                             autoPlay
                             loop
                             muted
                             playsInline
                             className="w-full h-auto object-cover aspect-[9/16]"
+                            preload="none"
                           />
                           <Button
                             variant="outline"
@@ -236,6 +240,7 @@ export const SocialProof = () => {
               src={selectedPhoto}
               alt="Original product photo"
               className="w-full h-auto object-cover aspect-[9/16]"
+              loading="lazy"
             />
           </div>
           <p className="text-center text-sm text-muted-foreground">

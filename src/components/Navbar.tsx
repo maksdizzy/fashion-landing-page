@@ -14,7 +14,6 @@ import {
 
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 
 interface RouteProps {
@@ -24,16 +23,16 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
+    href: "#social-proof",
+    label: "Examples",
+  },
+  {
     href: "#howItWorks",
     label: "How It Works",
   },
   {
     href: "#features",
-    label: "Examples",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
+    label: "Features",
   },
   {
     href: "#faq",
@@ -60,8 +59,6 @@ export const Navbar = () => {
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
-
             <Sheet
               open={isOpen}
               onOpenChange={setIsOpen}
@@ -93,15 +90,6 @@ export const Navbar = () => {
                       {label}
                     </a>
                   ))}
-                  <a
-                    rel="noreferrer noopener"
-                    href="#"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "default",
-                    })}`}
-                  >
-                    Login
-                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -122,25 +110,6 @@ export const Navbar = () => {
               </a>
             ))}
           </nav>
-
-          <div className="hidden md:flex gap-2">
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className={`${buttonVariants({ variant: "ghost" })}`}
-            >
-              Login
-            </a>
-            <a
-              rel="noreferrer noopener"
-              href="#pricing"
-              className={`${buttonVariants({ variant: "default" })}`}
-            >
-              Get Started
-            </a>
-
-            <ModeToggle />
-          </div>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
