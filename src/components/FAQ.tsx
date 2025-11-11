@@ -105,7 +105,15 @@ export const FAQ = () => {
           <p className="text-muted-foreground mb-4">
             Our support team is ready to help you 24/7
           </p>
-          <Button variant="outline">Contact Us</Button>
+          <Button variant="outline" asChild>
+            <a
+              href="https://wa.me/66951645820"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact Us
+            </a>
+          </Button>
         </div>
       </div>
     </section>
