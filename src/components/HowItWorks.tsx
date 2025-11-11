@@ -109,8 +109,14 @@ export const HowItWorks = () => {
                 <span>No watermarks ever</span>
               </p>
             </div>
-            <Button size="lg" className="w-full md:w-auto">
-              Try It Now →
+            <Button size="lg" className="w-full md:w-auto" asChild>
+              <a
+                href="https://forms.fillout.com/t/wAc48jcQMTus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Try It Now →
+              </a>
             </Button>
           </CardContent>
         </Card>

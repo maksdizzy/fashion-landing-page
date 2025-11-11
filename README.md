@@ -1,4 +1,4 @@
-# ReelCraft Landing Page
+# FashionFactory Landing Page
 
 > Professional AI-powered video generation service landing page built with React, TypeScript, Vite, and Tailwind CSS.
 

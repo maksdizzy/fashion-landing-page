@@ -96,8 +96,14 @@ export const Pricing = () => {
           </CardContent>
 
           <CardFooter className="flex flex-col gap-4">
-            <Button size="lg" className="w-full text-lg">
-              Create My First Video →
+            <Button size="lg" className="w-full text-lg" asChild>
+              <a
+                href="https://forms.fillout.com/t/wAc48jcQMTus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Create My First Video →
+              </a>
             </Button>
 
             {/* Guarantee */}

@@ -53,8 +53,14 @@ export const Hero = () => {
 
         {/* Primary CTA */}
         <div className="flex flex-col items-center gap-2">
-          <Button size="lg" className="text-lg px-8 py-6">
-            Create My First Video →
+          <Button size="lg" className="text-lg px-8 py-6" asChild>
+            <a
+              href="https://forms.fillout.com/t/wAc48jcQMTus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Create My First Video →
+            </a>
           </Button>
           <p className="text-sm text-muted-foreground">
             Get 5 videos instantly • Only $4.99

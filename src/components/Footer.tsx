@@ -14,7 +14,7 @@ export const Footer = () => {
             className="font-bold text-xl flex items-center gap-2 mb-4"
           >
             <LogoIcon />
-            ReelCraft
+            FashionFactory
           </a>
           <p className="text-sm text-muted-foreground">
             Professional AI-generated videos for fashion sellers. Turn product
@@ -104,7 +104,7 @@ export const Footer = () => {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            © 2025 ReelCraft. All rights reserved.
+            © 2025 FashionFactory. All rights reserved.
           </p>
         </div>
       </section>

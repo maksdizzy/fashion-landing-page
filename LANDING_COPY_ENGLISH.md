@@ -2,11 +2,11 @@
 ## All Text Content for AI Video Generation Service
 
 **Service Name Options:**
-- ReelCraft (Recommended)
+- FashionFactory (Recommended)
 - StyleMotion
 - FashionFrame
 
-**For this document, using:** ReelCraft
+**For this document, using:** FashionFactory
 
 ---
 
@@ -14,7 +14,7 @@
 
 **Logo Text:**
 ```
-ReelCraft
+FashionFactory
 ```
 
 **Navigation Links:**
@@ -743,7 +743,7 @@ Note: No spam. Unsubscribe anytime.
 
 **Footer Bottom:**
 ```
-Copyright: © 2025 ReelCraft. All rights reserved.
+Copyright: © 2025 FashionFactory. All rights reserved.
 ```
 
 ---
@@ -823,7 +823,7 @@ Next slide
 
 **Meta Title:**
 ```
-ReelCraft - AI Model Videos for Fashion Sellers | $4.99
+FashionFactory - AI Model Videos for Fashion Sellers | $4.99
 ```
 
 **Meta Description:**
@@ -833,9 +833,9 @@ Create professional model videos for your clothing in 5 minutes. AI-generated, H
 
 **Alternative Meta Titles:**
 ```
-Option 1: Turn Photos into Fashion Model Videos | ReelCraft AI
-Option 2: AI-Powered Fashion Videos for Etsy Sellers | ReelCraft
-Option 3: Professional Model Videos Without Models | ReelCraft
+Option 1: Turn Photos into Fashion Model Videos | FashionFactory AI
+Option 2: AI-Powered Fashion Videos for Etsy Sellers | FashionFactory
+Option 3: Professional Model Videos Without Models | FashionFactory
 ```
 
 **Alternative Meta Descriptions:**
@@ -857,7 +857,7 @@ Professional Model Videos for Your Clothing Without the $5,000 Price Tag
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "ReelCraft AI Video Generation",
+  "name": "FashionFactory AI Video Generation",
   "description": "AI-generated professional model videos for fashion products",
   "offers": {
     "@type": "Offer",
@@ -958,11 +958,11 @@ Get Started
 
 **Welcome Email:**
 ```
-Subject: Welcome to ReelCraft! 🎉
+Subject: Welcome to FashionFactory! 🎉
 
 Hi [Name],
 
-Welcome to ReelCraft! We're excited to help you create stunning fashion videos.
+Welcome to FashionFactory! We're excited to help you create stunning fashion videos.
 
 Ready to transform your Etsy listings?
 
@@ -971,7 +971,7 @@ Ready to transform your Etsy listings?
 Need help? Reply to this email anytime.
 
 Best,
-The ReelCraft Team
+The FashionFactory Team
 ```
 
 **Generation Complete Email:**
